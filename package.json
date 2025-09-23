@@ -5,15 +5,15 @@
   "private": true,
   "license": "MIT",
   "author": "Ivan Protsyk | ivanprotsyk1998@gmail.com",
-  "main": "src/index.js",
+  "main": "server.js",
   "type": "module",
   "engines": {
     "node": ">=18.18"
   },
   "packageManager": "npm@10",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon -- watch index.js",
+    "start": "node server.js",
+    "dev": "nodemon -- watch server.js",
     "dev:studio": "drizzle-kit studio",
     "dev:push": "drizzle-kit push",
     "dev:pull": "drizzle-kit pull",
@@ -40,9 +40,12 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.16.3",
+    "postgres": "^3.4.7",
     "zod": "^4.1.11"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "drizzle-kit": "^0.31.4",
+    "nodemon": "^3.1.7",
+    "tsx": "^4.20.5"
   }
 }

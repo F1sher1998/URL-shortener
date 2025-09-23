@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres.clhgycojshevppldxcgp
+      POSTGRES_PASSWORD: SJI190614
+      POSTGRES_DB: postgres
+    ports:
+      - "6543:6543"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+    db_data:
