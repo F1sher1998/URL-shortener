@@ -1,4 +1,37 @@
 {
+  "name": "url-shortener",
+  "version": "0.1.0",
+  "description": "Short description of your project",
+  "private": true,
+  "license": "MIT",
+  "author": "Ivan Protsyk | ivanprotsyk1998@gmail.com",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18.18"
+  },
+  "packageManager": "npm@10",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon -- watch index.js",
+    "dev:studio": "drizzle-kit studio",
+    "dev:push": "drizzle-kit push",
+    "dev:pull": "drizzle-kit pull",
+    "test": "node --test",
+    "postinstall": "echo \"✔ Dependencies installed\""
+  },
+  "keywords": [
+    "node",
+    "express",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/F1sher1998/URL-shortener.git"
+  },
+  "bugs": {
+    "email": "ivanprotsyk1998@icloud.com"
+  },
+  "homepage": "https://github.com/F1sher1998/URL-shortener#readme",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "dotenv": "^17.2.2",
@@ -7,5 +40,8 @@
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.16.3",
     "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }
