@@ -6,6 +6,7 @@
   "license": "MIT",
   "author": "Ivan Protsyk | ivanprotsyk1998@gmail.com",
   "main": "src/index.js",
+  "type": "module",
   "engines": {
     "node": ">=18.18"
   },
