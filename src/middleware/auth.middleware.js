@@ -17,3 +17,11 @@ export function authenticationMiddleware(req, res, next) {
   next();
 
 }
+
+
+export async function checkForUserId(req, res, next) {
+  if(!req.user.id || !req.user) {
+    return res.status(401).json({ error: 'Unauthorized: User ID missing' });
+  }
+  next();
+}

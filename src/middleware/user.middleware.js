@@ -5,3 +5,4 @@ export async function checkIfUserExists(existingUser, req, res) {
     .status(409)
     .json({ error: 'Email already in use' });
 }
+
