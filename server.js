@@ -1,11 +1,15 @@
 import express from 'express';
+import {authenticationMiddleware} from './src/middleware/auth.middleware.js';
+
+
+
 const app = express();
 const PORT = process.env.PORT || 8000;
 import userRoutes from './src/routes/user.routes.js';
 
 
 app.use(express.json());
-
+app.use(authenticationMiddleware);
 
 app.get('/health', (req, res) => {
   try{
