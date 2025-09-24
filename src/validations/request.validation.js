@@ -11,3 +11,9 @@ export const loginPostRequestBodySchema = z.object({
   email: z.string().email('Invalid email address'),
   password: z.string().min(6, 'Password is required'),
 })
+
+
+export const shortenPostRequestBodySchema = z.object({
+  url: z.string().url('Invalid URL'),
+  code: z.string().optional()
+})

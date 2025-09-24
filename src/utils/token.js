@@ -17,10 +17,6 @@ export async function createUserToken(payload){
 
 
 export function validateUserToken(token) {
-  try{
     const payload = jwt.verify(token, JWT_SECRET);
-  } catch(err){
-    throw new Error('Invalid or expired token');
-  }
-  return payload
+    return payload;
 }

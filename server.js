@@ -1,11 +1,12 @@
+import 'dotenv/config.js';
 import express from 'express';
 import {authenticationMiddleware} from './src/middleware/auth.middleware.js';
-
+import userRoutes from './src/routes/user.routes.js';
+import urlRoutes from './src/routes/url.routes.js';
 
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-import userRoutes from './src/routes/user.routes.js';
 
 
 app.use(express.json());
@@ -20,6 +21,7 @@ app.get('/health', (req, res) => {
 })
 
 app.use('/user', userRoutes);
+app.use(urlRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
